@@ -1,12 +1,12 @@
 /* Variables */
 
 $color-one: #0097e6; // light blue
-$color-two: #33d9b2; // light green
-$color-three: #ff5252; // light red
+$color-two: #f3dc10; // yellow
+$color-three: #000000; // black
 $color-main: #2c2c54;
 
- $font-text: 'Inconsolata', monospace;
- $font-header: 'Signika', sans-serif;
+ $font-text: 'Libre Baskerville', serif;
+ $font-header: 'Anton', sans-serif;
  
  $transition: all 0.7s;
 
@@ -148,7 +148,7 @@ section {
     position: relative;
 }
 
-/* Our services */
+/* Services */
 
 .services {
     
@@ -191,14 +191,11 @@ section {
     }
 }
 
-.box-number {
-    position: absolute;
-    top: 30px;
-    line-height: 1;
+.box-icon {
+    position: relative;
     color: $color-two;
-    font-size: 150px;
+    font-size: 50px;
     font-family: $font-header;
-    opacity: 0.3;
 }
 
 .btn-two {
@@ -232,7 +229,7 @@ section {
 }
 
 .box-work {
-    flex: 0 0 50%;
+    flex: 0 0 33.3%;
     position: relative;
     min-height: 300px;
 }
@@ -288,67 +285,7 @@ section {
     color: $color-three;
 }
 
-/* contact */
-
-.contact {
-    background: $color-one;
-    .section-title {
-        color: #fff;
-    }
-    form {
-        padding: 0px;
-        max-width: 100%;
-        margin: 0 auto;
-    }
-    input,
-    textarea {
-        font-family: $font-text;
-        display: block;
-        width: 100%;
-        height: 100%;
-        padding: 5px 10px;
-        margin: 10px 100px 10px 0;
-        border: none;
-        border-bottom: 2px solid;
-        background: $color-one;
-        color: #ffffff;
-    }
-    .field {
-        ::placeholder {
-            color: #fff;
-        }
-    }
-    .message {
-        input,
-        textarea {
-            padding: 50px 10px;
-            vertical-align: text-top;
-        }
-    }
-    .my-info {
-        color: #fff;
-        h3 {
-            font-size: 20px;
-        }
-        p {
-            line-height: 1;
-            font-size: 14px;
-        }
-    }
-    ul {
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-    }
-    li {
-        display: inline-block;
-        margin: 0 48px;
-        position: relative;
-    }
-}
-
 /* footer */
-
 
 .page-footer {
     background: #ffffff;
