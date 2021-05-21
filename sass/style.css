@@ -213,6 +213,13 @@ section {
   position: relative;
   color: #f3dc10;
   font-size: 50px;
+  border-radius: 50%;
+  border: 7px solid #f3dc10;
+  padding: 1px;
+  margin: auto;
+  height: 100px;
+  width: 100px;
+  display: block;
 }
 
 /* our portfolio */
@@ -234,10 +241,7 @@ section {
 }
 
 .portfolio-image {
-  position: absolute;
-  max-width: 70%;
-  height: 70%;
-  left: 55px;
+  height: 200px;
 }
 
 .portfolio-image img {
@@ -248,7 +252,6 @@ section {
 }
 
 .box-portfolio .portfolio-description {
-  margin: 250px 0 0 0;
   padding: 1px;
   background-color: #fff;
 }
@@ -273,6 +276,15 @@ section {
   margin: 0 auto;
   padding: 48px 0;
   text-align: center;
+}
+
+.page-footer .container {
+  position: relative;
+}
+
+.page-footer .copyright {
+  position: absolute;
+  left: 50px;
 }
 
 .page-footer li {
