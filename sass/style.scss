@@ -6,7 +6,7 @@ $color-three: #000000; // black
 $color-main: #2c2c54;
 
  $font-text: 'Libre Baskerville', serif;
- $font-header: 'Anton', sans-serif;
+ $font-header: 'Lato', sans-serif;
  
  $transition: all 0.7s;
 
@@ -22,6 +22,7 @@ body {
     margin: 0;
     font-size: 16px;
     line-height: 1.7;
+    text-align: center;
 }
 
 .container {
@@ -40,7 +41,7 @@ section {
     margin: 24px auto 0 auto;
     padding: 16px;
     border-radius: 5px;
-    font-family: $font-text;
+    font-family: $font-header;
     font-size: 16px;
     text-align: center;
     text-decoration: none;
@@ -59,19 +60,34 @@ section {
 .btn-one {
     border-color: $color-two;
     color: #ffffff;
-    background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%);
+    background-color: $color-two;
     }
 
 .btn-one:hover {
-    color: $color-two;
+    color: $color-three;
     transition: $transition;
 }
 
-/* Navigation */
+/* Splash & Navigation */
+
+.splash {
+    height: 100vh;
+    position: relative;
+    background-image: url("https://images.pexels.com/photos/6567971/pexels-photo-6567971.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.splash-inner {
+    margin: auto;
+    max-width: 80%;
+}
 
 .navigation {
-    background: $color-one;
     padding: 12px 0;
+    font-family: $font-header;
+    text-align: right;
     ul {
         padding: 0;
         margin: 0;
@@ -114,54 +130,45 @@ section {
         }
     }
 }
- 
-/* Splash */
 
-.splash {
-    background: $color-one;
+.brand-name {
+    font-family: 'Pattaya', sans-serif;
+    font-size: 28px;
     color: $color-two;
-    height: 500px;
-    display: flex;
-}
-
-.splash-inner {
-    margin: auto;
-    max-width: 70%;
+    position: absolute;
+    top: -25px;
+    left: 90px;
 }
 
 .page-title {
-    margin: 0;
-    font-size: 72px;
-    word-spacing: -24px;
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-.page-title span {
+    color: #ffffff;
+    font-size: 80px;
     font-family: $font-header;
+    margin: 10px 0;
 }
 
 .page-subtitle {
-    margin: 24px 0;
+    color: #ffffff;
     font-weight: 400;
-    font-size: 16px;
-    position: relative;
+    font-size: 30px;
+    font-style: italic;
+    margin: 150px 0 10px 0;
 }
 
 /* Services */
 
-.services {
-    
-}
 
 .section-title {
-    font-size: 48px;
-    margin: 0 0 72px 0;
+    font-size: 45px;
+    font-family: $font-header;
+    margin: 0 0 5px 0;
 }
 
 .section-subtitle {
-    font-size: 24px;
-    margin: 0 0 12px 0;
+    font-size: 15px;
+    color: grey;
+    margin: 0 0 60px 0;
+    font-style: italic;
 }
 
 .boxes-parent {
@@ -181,10 +188,14 @@ section {
     p:first-of-type {
         font-weight: bolder;
     }
-    .section-subtitle {
-        position: relative;    
+    .box-title {
+        position: relative;
+        font-family: $font-header;
+        font-style: normal;
     }
-    p:last-of-type {
+    p {
+        font-weight: lighter;
+        color: grey;
         min-height: 100px;
         max-height: 100px;
         overflow: hidden;
@@ -195,94 +206,84 @@ section {
     position: relative;
     color: $color-two;
     font-size: 50px;
-    font-family: $font-header;
+    // :after {
+    //     position: absolute;
+    //     content: '';
+    //     bottom: -24px;
+    //     left: 50%;
+    //     width: 100px;
+    //     height: 100px;
+    //     transform: translateX(-50%);
+    //     border-radius: 50%;
+    //     background: $color-one;
+    // }
 }
 
-.btn-two {
-    border-color: $color-two;
-    color: $color-two;
-    background-image: linear-gradient(90deg, $color-two 50%, transparent 50%);
-    transition: $transition;
-    top: 220px;
-}
+/* our portfolio */
 
-.btn-three {
-    border-color: $color-three;
-    color: $color-three;
-    background-image: linear-gradient(90deg, $color-three 50%, transparent 50%);
-    transition: $transition;
-    top: 220px;
+.our-portfolio {
+    background-color: rgb(238, 238, 238);
 }
-
-.btn-four {
-    border-color: $color-one;
-    color: $color-one;
-    background-image: linear-gradient(90deg, $color-one 50%, transparent 50%);
-    transition: $transition;
-    top: 220px;
-}
-
-/* our work */
 
 .boxes-parent {
     margin-bottom: 40px;
 }
 
-.box-work {
+.box-portfolio {
     flex: 0 0 33.3%;
     position: relative;
+    padding: 0 30px;
     min-height: 300px;
 }
 
-.work-image {
+.portfolio-image {
     position: absolute;
-    max-width: 50%;
-    height: 100%;
+    max-width: 70%;
+    height: 70%;
+    left: 55px;
 }
 
-.work-image:after {
-    position: absolute;
-    content: '';
-    left: 20px;
-    bottom: -20px;
-    width: 100%;
-    height: 100%;
-    background: $color-two;
-    opacity: 0.3;
-    transition: $transition;
-    :hover {
-        background: $color-one;            
-    }
-}
+// .portfolio-image:after {
+//     position: absolute;
+//     content: '';
+//     left: 20px;
+//     bottom: -20px;
+//     width: 100%;
+//     height: 100%;
+//     background: $color-two;
+//     opacity: 0.3;
+//     transition: $transition;
+//     :hover {
+//         background: $color-one;            
+//     }
+// }
 
-.work-image:hover:after {
-        background: $color-three;
-        transform: translate(-20px, -20px);
-    }
+// .portfolio-image:hover:after {
+//         background: $color-three;
+//         transform: translate(-20px, -20px);
+//     }
 
-.work-image img {
+.portfolio-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.box-work .work-description {
-    padding: 36px 0 36px 55%;
-    text-align: left;
-    p:last-of-type {
-    font-weight: bolder;
+.box-portfolio .portfolio-description {
+    margin: 250px 0 0 0;
+    padding: 1px;
+    background-color: #fff;
+    .skill-title {
+        font-family: $font-header;
+        margin: 5px 0;
+        padding: 5px 0;
     }
-}
-
-.btn-five {
-    border: none;
-    margin: 36px 0;
-    padding: 0;
-    text-align: left;
-}
-
-.btn-five:hover {
-    color: $color-three;
+    p {
+        color:grey;
+        font-style: italic;
+        font-size: 14px;
+        margin: 5px 0 15px 0;
+    }
 }
 
 /* footer */
@@ -326,12 +327,12 @@ section {
             max-width: 70%;
         }
     }
-    .work-image {
+    .portfolio-image {
         max-width: 100%;
         height: 150px;
         position: relative;
     }
-    .box-work .work-description {
+    .box-portfolio .portfolio-description {
     padding: 36px 0;
     }
     .contact {
